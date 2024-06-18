@@ -1,6 +1,5 @@
 // src/App.jsx
 import './weatherForcasts/WeatherForecast.css';
-import './weatherForcasts/WeatherForecast.jsx';
 import WeatherForecast from './weatherForcasts/WeatherForecast.jsx';
 
 
@@ -49,14 +48,14 @@ const App = () => {
   return (
     <>
     <h1>The Weather Forecast</h1>
-    <section>
-      {weatherForecasts.map((forecast) => {
-        <WeatherForecast 
-        key={forecast.id}
-        {...forecast}
-        />
-      })}
-    </section>
+      <section>
+        {weatherForecasts.map((forecast) => {
+          return <WeatherForecast 
+          key={forecast.id}
+          {...forecast}
+          />
+        })}
+      </section>
     </>
   );
 }
